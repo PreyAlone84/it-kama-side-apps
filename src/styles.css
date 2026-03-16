@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 300px;
+}
+
+.card {
+  border: 4px solid black;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.card-row {
+  display: flex;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 4px solid black;
+  padding: 16px;
+  width: 300px;
+}
