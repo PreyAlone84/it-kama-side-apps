@@ -17,7 +17,8 @@ export type PlanetsInfoResults = {
 
 export const getPlanets = () => {
   const promise: Promise<PlanetsInfoResults> = fetch(
-    "http://swapi.dev/api/planets"
+    "https://swapi.dev/api/planets",
+    { headers: { Accept: "application/json" } }
   ).then((res) => res.json());
   return promise;
 };
@@ -29,8 +30,10 @@ export type PlanetData = {
 
 export const getPlanet = (selectedId: number) => {
   const promise: Promise<PlanetInfo> = fetch(
-    `http://swapi.dev/api/planets/${selectedId}`
+    `https://swapi.dev/api/planets/${selectedId}`,
+    { headers: { Accept: "application/json" } }
   ).then((res) => res.json());
 
   return promise;
 };
+
